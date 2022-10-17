@@ -116,7 +116,7 @@ function InputForm({ login }) {
               size="small"
             />
             {errValueName && (
-              <p style={errStyle}>Your account name is too longgg!</p>
+              <p style={errStyle}>Your user name is too long!</p>
             )}
           </>
         )}
@@ -131,7 +131,7 @@ function InputForm({ login }) {
           style={inputStyle}
           size="small"
         />
-        {errValueEmail && <p style={errStyle}>Email is incozage!</p>}
+        {errValueEmail && <p style={errStyle}>wrong email!</p>}
 
         <TextField
           id="outlined-basic"
@@ -234,7 +234,7 @@ function InputForm({ login }) {
           fontSize: 12,
         }}
       >
-        {login ? "NEW TO AUTODESK?" : "ALREADY HAVE AN ACCOUNT?"}
+        {login ? "Don’t have an account ?" : "ALREADY HAVE AN ACCOUNT?"}
 
         {login ? (
           <Link

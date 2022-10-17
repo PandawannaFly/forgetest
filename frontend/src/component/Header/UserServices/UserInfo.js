@@ -3,6 +3,8 @@ import LogoutIcon from "@mui/icons-material/Logout";
 import { Tooltip, Zoom } from "@mui/material";
 
 function UserInfo() {
+
+  // logout
   const handleLogout = () => {
     localStorage.clear();
     location.reload();
@@ -17,7 +19,8 @@ function UserInfo() {
         cursor: "pointer",
       }}
     >
-      <span> PandawannaFly</span>
+      
+        <span> PandawannaFly</span>
 
       <Tooltip
         TransitionComponent={Zoom}

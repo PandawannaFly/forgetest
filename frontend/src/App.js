@@ -4,6 +4,7 @@ import './App.css';
 import HomePage from 'Pages/HomePage';
 import { loadScript } from 'untils/loadScripts/loadScripts';
 
+
 function App() {
     loadScript();
     return (

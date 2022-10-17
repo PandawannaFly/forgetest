@@ -17,9 +17,8 @@ const errStyle = {
   float: "left",
   color: "#f15e5e",
 };
-
-
-
+//
+//
 function InputForm({ login }) {
   const [valueName, setValueName] = useState("");
   const [errValueName, setErrValueName] = useState(false);
@@ -30,6 +29,7 @@ function InputForm({ login }) {
   const [valueRePassword, setValueRePassword] = useState("");
   const [errValueRePassword, setErrValueRePassword] = useState(false);
   const [checked, setChecked] = useState(false);
+
 
   const isFetching = useSelector(isFetchingSelector);
 

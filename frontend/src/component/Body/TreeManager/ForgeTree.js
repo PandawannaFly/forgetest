@@ -7,6 +7,10 @@ import { Spin } from "antd";
 import { TreeItem, TreeView } from "@mui/lab";
 import FolderOpenIcon from "@mui/icons-material/FolderOpen";
 import DescriptionIcon from "@mui/icons-material/Description";
+import CancelIcon from '@mui/icons-material/Cancel';
+
+import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
+import RemoveCircleOutlineIcon from '@mui/icons-material/RemoveCircleOutline';
 
 import { request } from "untils/request";
 import { refreshSelector } from "redux/Refresh/refreshSelector";
@@ -15,7 +19,7 @@ import {
   changeRefreshTree,
 } from "redux/Refresh/refreshSlice";
 import PopoverMenu from "./Popover/PopoverMenu";
-import { CloseSquare, MinusSquare, PlusSquare } from "./Popover/StyledTreeItem";
+
 import { getForgeToken, translateObject } from "untils/request";
 import { launchViewer } from "component/Body/ViewForge/ForgeView";
 import { setUrnLink } from "redux/UrnLink/urnSlice";
@@ -116,9 +120,9 @@ function ForgeTree() {
       {!loading && (
         <TreeView
           aria-label="rich object"
-          defaultCollapseIcon={<MinusSquare />}
-          defaultExpandIcon={<PlusSquare />}
-          defaultEndIcon={<CloseSquare />}
+          defaultCollapseIcon={<RemoveCircleOutlineIcon />}
+          defaultExpandIcon={<AddCircleOutlineIcon />}
+          defaultEndIcon={<CancelIcon />}
         >
           {buckets.map((bucket) => {
             return (

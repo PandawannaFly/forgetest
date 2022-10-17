@@ -72,6 +72,7 @@ function PopoverMenu({ data, open, anchorEl, onClose }) {
                                 paddingRight: 4,
                                 marginRight: 4,
                                 borderRight: '1px solid #979797',
+                                borderRadius: '30px !important'
                             }}
                         >
                             <CloudUploadIcon />

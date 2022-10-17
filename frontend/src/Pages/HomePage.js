@@ -7,6 +7,10 @@ import { publicRoutes } from "routes/routes";
 import AppPage from "./AppPage";
 
 function HomePage() {
+  // const adminUser = {
+  //   email: "ha115@gmail.com",
+  //   password: "ha123",
+  // };
   const logged = localStorage.getItem("logged");
 
   const navigate = useNavigate();

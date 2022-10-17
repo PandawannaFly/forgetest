@@ -18,6 +18,8 @@ const errStyle = {
   color: "#f15e5e",
 };
 
+
+
 function InputForm({ login }) {
   const [valueName, setValueName] = useState("");
   const [errValueName, setErrValueName] = useState(false);

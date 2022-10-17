@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import HomeLayout from "Layout/HomeLayout";
+// import HomeLayout from "Layout/HomeLayout";
 import { useEffect } from "react";
 import { Route, Routes, useNavigate } from "react-router-dom";
 
@@ -35,11 +35,7 @@ function HomePage() {
               <Route
                 path={route.path}
                 key={index}
-                element={
-                  <HomeLayout>
-                    <Page login={route.login} />
-                  </HomeLayout>
-                }
+                element={<Page login={route.login} />}
               />
             );
           })

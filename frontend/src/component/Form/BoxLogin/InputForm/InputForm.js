@@ -219,9 +219,9 @@ function InputForm({ login }) {
           {isFetching ? (
             <CircularProgress size="20px" sx={{ color: "#efeff0" }} />
           ) : login ? (
-            " Sign In"
+            " Sign IN"
           ) : (
-            "Create accout"
+            "Create account"
           )}
         </Button>
       </form>
@@ -234,7 +234,7 @@ function InputForm({ login }) {
           fontSize: 12,
         }}
       >
-        {login ? "Don’t have an account ?" : "ALREADY HAVE AN ACCOUNT?"}
+        {login ? "DON't HAVE AN ACCOUNT ?" : "ALREADY HAVE AN ACCOUNT?"}
 
         {login ? (
           <Link

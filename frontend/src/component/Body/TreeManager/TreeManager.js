@@ -13,7 +13,7 @@ function TreeManager() {
             <div className="panel-heading" data-toggle="tooltip">
                 <div className="col-xs-8 fill">
                     <p style={{ float: 'left', width: 'auto' }}>
-                        Buckets và đối tượng
+                        Các Bucket và đối tượng
                         <span
                             id="refreshBuckets"
                             className="glyphicon glyphicon-refresh"

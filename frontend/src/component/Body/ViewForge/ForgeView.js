@@ -6,6 +6,7 @@ import { getForgeToken } from "untils/request";
 import { urnSelector } from "redux/UrnLink/urnSelcetor";
 import { bootScreenSelector } from "redux/Refresh/refreshSelector";
 
+
 let viewer;
 
 
@@ -39,6 +40,7 @@ export function launchViewer(urn) {
         document.getElementById("forgeViewer"),
         {
           // add vao dang mang extensions: [];
+          extensions: ['MyAwesomeExtension'] 
         }
       );
 

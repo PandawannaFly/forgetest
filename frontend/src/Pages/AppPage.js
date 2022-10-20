@@ -2,6 +2,7 @@
 import Body from 'component/Body/Body';
 import Header from 'component/Header/Header';
 
+
 function AppPage() {
     return (
         <main>

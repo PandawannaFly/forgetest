@@ -5,13 +5,12 @@ import { useSelector } from "react-redux";
 import { getForgeToken } from "untils/request";
 import { urnSelector } from "redux/UrnLink/urnSelcetor";
 import { bootScreenSelector } from "redux/Refresh/refreshSelector";
-
+import HandleSelectionExtension from "../../Extensions/myawesomeextension";
+import TurnTableExtension from "../../Extensions/camerarotation";
 
 let viewer;
 
-const extensions =[
-  'HandleSelectionExtension',
-]
+const extensions = ["HandleSelectionExtension", "CameraRotation"];
 
 //load file len viewer
 function onDocumentLoadSuccess(doc) {
@@ -37,22 +36,21 @@ export function launchViewer(urn) {
       env: "AutodeskProduction",
       getAccessToken: getForgeToken,
     };
-// co the them moi cac extension vao day
+    // co the them moi cac extension vao day
     Autodesk.Viewing.Initializer(options, () => {
-
-      
+      Autodesk.Viewing.theExtensionManager.registerExtension(
+        "HandleSelectionExtension",
+        HandleSelectionExtension
+      );
+      Autodesk.Viewing.theExtensionManager.registerExtension('CameraRotation', TurnTableExtension);
       viewer = new Autodesk.Viewing.GuiViewer3D(
         document.getElementById("forgeViewer"),
         {
           //
           extensions: extensions,
         }
+      );
 
-
-        );
-        Autodesk.Viewing.theExtensionManager.registerExtension('HandleSelectionExtension',
-        HandleSelectionExtension);
-     
       viewer.start();
       let documentId = "urn:" + urn;
       Autodesk.Viewing.Document.load(
@@ -64,7 +62,7 @@ export function launchViewer(urn) {
   }
 }
 
-export  function ViewContainer() {
+function ViewContainer() {
   const bootScreen = useSelector(bootScreenSelector);
 
   const urn = useSelector(urnSelector);

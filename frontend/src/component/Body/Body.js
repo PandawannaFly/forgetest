@@ -1,5 +1,5 @@
 import TreeManager from './TreeManager/TreeManager';
-import {ViewContainer} from './ViewForge/ForgeView';
+import ViewContainer from './ViewForge/ForgeView';
 
 function Body() {
     return (

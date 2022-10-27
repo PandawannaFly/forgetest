@@ -22,7 +22,7 @@ const authSlice = createSlice({
       state.login.isFetching = false;
       state.login.logged = true;
       state.login.mess = "Login Success!";
-        // chuyen obj
+      //
       localStorage.setItem("token", token.access_token);
       localStorage.setItem("expires_in", token.expires_in);
       localStorage.setItem("userName", state.login.currentUser.name);

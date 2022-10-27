@@ -38,11 +38,9 @@ export function launchViewer(urn) {
     };
     // co the them moi cac extension vao day
     Autodesk.Viewing.Initializer(options, () => {
-      Autodesk.Viewing.theExtensionManager.registerExtension(
-        "HandleSelectionExtension",
-        HandleSelectionExtension
-      );
-      Autodesk.Viewing.theExtensionManager.registerExtension('CameraRotation', TurnTableExtension);
+
+      Autodesk.Viewing.theExtensionManager.registerExtension("HandleSelectionExtension", HandleSelectionExtension);
+      Autodesk.Viewing.theExtensionManager.registerExtension("CameraRotation", TurnTableExtension);
       viewer = new Autodesk.Viewing.GuiViewer3D(
         document.getElementById("forgeViewer"),
         {

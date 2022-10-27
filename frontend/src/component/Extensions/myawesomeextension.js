@@ -1,4 +1,6 @@
 /* eslint-disable no-undef */
+import "./handleselectionicon.css"
+
 export default class HandleSelectionExtension extends Autodesk.Viewing
   .Extension {
   constructor(viewer, options) {
@@ -67,8 +69,9 @@ export default class HandleSelectionExtension extends Autodesk.Viewing
         this.viewer.isolate(0);
       }
     };
-    this._button.setToolTip("My Awesome Extension");
+    this._button.setToolTip("HandleSelection");
     this._button.addClass("HandleSelectionExtensionIcon");
     this._group.addControl(this._button);
   }
 }
+//
